@@ -10,7 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', 'HomeController@index');
 Route::get('/article/{id}', ['as' => 'article', 'uses' => 'ArticleController@index']);
 Route::get('/category/{id}', ['as' => 'category', 'uses' => 'CategoryController@index']);
@@ -19,6 +18,14 @@ Route::get('/search', ['as' => 'search', 'uses' => 'SearchController@index']);
 Route::get('/page/{alias}', ['as' => 'page.show', 'uses' => 'PageController@index']);
 Route::get('/about', ['as' => 'about', 'uses' => 'PageController@about']);
 Route::get('/rss', ['as' => 'rss', 'uses'=>'RssController@index']);
+Route::any('/weixin', 'WechartController@index');
+// 微信群发功能
+Route::group(['middleware' => 'wechat.oauth'],function (){
+    Route::resource('/wechat_massSend', 'SendController');
+    Route::get('/ss',function (){
+        dd(11111);
+    });
+});
 
 Route::group(['prefix'=>'backend'], function(){
 

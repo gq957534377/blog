@@ -10,8 +10,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="@yield('description')" />
     <meta name="keywords" content="@yield('keywords')" />
-    <meta name="author" content="Moell" />
+    <meta name="author" content="郭庆" />
+     <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?b498b4def32afee49866c3a2c547b057";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
+    
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
@@ -24,7 +34,6 @@
     @yield('style')
 
     <link rel="stylesheet" href="{{ asset('default/css/index.css') }}">
-
 </head>
 <body>
 @inject('systemPresenter', 'App\Presenters\SystemPresenter')
@@ -44,7 +53,6 @@
             @include('default.navigation')
         </div>
     </nav>
-
 </header>
 
 <section id="moell-home" data-section="home"   data-stellar-background-ratio="0.5">
@@ -75,6 +83,7 @@
             </div>
         </div>
     </div>
+    <script>(function(){var c=document.createElement("script"),s=document.getElementsByTagName("script")[0];c.src="//kefu.qycn.com/vclient/?webid=134740";s.parentNode.insertBefore(c,s);})();</script>
 </section>
 
 @include('default.footer')
