@@ -9,6 +9,7 @@
 @section('keywords', $systemPresenter->getKeyValue('seo_keyword'))
 
 @section('header-text')
+<meta name="baidu-site-verification" content="r6zccjhL8D" />
     <div class="text-inner">
         <div class="row">
             <div class="col-md-12">

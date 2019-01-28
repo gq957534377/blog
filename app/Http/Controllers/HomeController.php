@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        \Log::info('访问者IP' . $request->getClientIp() . '来源:'.$this->getLocation($request->getClientIp()));
+        #\Log::info('访问者IP' . $request->getClientIp() . '来源:'.$this->getLocation($request->getClientIp()));
         $articles = $this->article
             ->orderBy('sort','desc')
             ->orderBy('id', 'desc')
